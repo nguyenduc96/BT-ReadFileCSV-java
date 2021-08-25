@@ -26,6 +26,8 @@ public class Main {
                 String name = strings[2];
                 countries.add(new Country(id, code, name));
             }
+            bufferedReader.close();
+            fileReader.close();
         } catch (IOException e) {
             System.out.println("File nguồn hoặc đường dẫn không hợp lệ.");
         }
@@ -41,6 +43,7 @@ public class Main {
                 bufferedWriter.write(country.toString() + "\n");
             }
             bufferedWriter.close();
+            fileWriter.close();
         } catch (IOException e) {
             System.out.println("Tệp nguồn không tồn tại hoặc bị lỗi.");
         }
